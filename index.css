@@ -1,0 +1,143 @@
+body {
+    font-size: 16px;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.main {}
+
+.vs {
+    height: 100vh;
+}
+#check{
+    display: none;
+}
+
+.nav {
+    height: 10%;
+    width: 100%;
+    background: #340f0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    && .nav-left{
+        width: 30%;
+        /* background: #000; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.8rem;
+    }
+
+    && .nav-right{
+        width: 70%;
+        /* background: #000; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-evenly;
+        font-size: 1.1rem;
+        && h2 a{
+            color: #fff;
+        }
+
+        && i{
+            display: none;
+        }
+    }
+}
+
+.hero {
+    height: 82%;
+    width: 100%;
+    background: #585050;
+}
+
+.bottom {
+    height: 8%;
+    width: 100%;
+    background: #301d1d;
+}
+
+.menu {
+    position: absolute;
+    background: #a36060;
+    left: 0%;
+    top: 10%;
+    padding: 10px;
+    height: 82%;
+    width: 0%;
+    font-size: 1.5rem;
+
+
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1), width 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    height: 90%;
+    /* display: none; */
+
+}
+
+.menu ul li {
+    list-style: none;
+    height: 10vh;
+}
+
+#check:checked~.menu {
+    display: flex;
+    height: 82%;
+    /* transition: 3s ease-in-out; */
+    width: 100%;
+    opacity: 1;
+}
+
+
+.bottom{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    && .item{
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media (min-width:700px)
+{
+    #check:checked~.menu {
+        display: flex;
+        width: 25%;
+        opacity: 1;
+        height: 90%;
+    }
+    .hero{
+        height: 90%;
+    }
+
+    .bottom{
+        display: none;
+    }
+
+    .nav{
+        && .nav-right{
+            && i{
+                display:block;
+            }
+        }
+    }
+}
