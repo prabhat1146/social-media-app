@@ -66,6 +66,16 @@ body {
     /* background: #e09d0d; */
 }
 
+.vdo{
+    width: 80%;
+    height: 50%;
+    /* background: #000; */
+    position: relative;
+    right: -0px;
+    left: 25%;
+    /* z-index: 0; */
+    /* bottom: 0px; */
+}
 .bottom {
     height: 8%;
     width: 100%;
