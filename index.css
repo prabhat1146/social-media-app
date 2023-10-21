@@ -20,11 +20,11 @@ body {
 .nav {
     height: 10%;
     width: 100%;
-    background: #340f0f;
+    background: #6d0808;
     /* position: relative; */
     /* overflow: hidden; */
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     && .nav-left{
         width: 30%;
@@ -43,12 +43,17 @@ body {
         align-items: center;
         justify-content: space-evenly;
         font-size: 1.1rem;
+       
         && h2 a{
             color: #fff;
         }
 
-        && i{
+        && a i{
             display: none;
+            cursor: pointer;
+        }
+        && a{
+            text-decoration: none;
         }
     }
 }
@@ -57,7 +62,8 @@ body {
     height: 82%;
     width: 100%;
     position: relative;
-    background: #585050;
+    background: #bfa878;
+    /* background: #e09d0d; */
 }
 
 .bottom {
@@ -66,12 +72,34 @@ body {
     background: #301d1d;
 }
 
-.menu {
+
+
+
+.menu ul {
+    position: absolute;
+    list-style: none;
+    height: 100%;
+    top: 0%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
     
-    /* position: relative; */
-   
-
-
+}
+.menu ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    height: 10%;
+    color: #fff;
+    /* border: 1px solid #6d0808; */
+    cursor: pointer;
+    
+}
+.menu ul li:hover {
+    background: #6d0808;
+    
 }
 
 .menu {
@@ -82,31 +110,17 @@ body {
     align-items: center;
     opacity: 0;
     /* Initially hidden */
-    transition: opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1), width 1s cubic-bezier(0.075, 0.82, 0.165, 1);
     height: 100%;
-    background: #a36060;
+    background: #c14433;
     left: 0%;
     top: 0%;
     font-size: 1.5rem;
     width: 0%;
+    transition: opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1), width 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 
 }
-
-.menu ul {
-    position: absolute;
-    list-style: none;
-    height: 100%;
-    top: 0%;
-    padding-top:7% ;
-   
-}
-.menu ul li {
-    list-style: none;
-    height: 10vh;
-}
-
 #check:checked~ .hero .menu {
-    display: flex;
+    /* display: flex; */
     width: 100%;
     opacity: 1;
     /* background: #000; */
@@ -144,10 +158,26 @@ body {
     }
 
     .nav{
+        && .nav-left{
+            width: 15%;
+        }
         && .nav-right{
-            && i{
+            && a i{
+                display: block;
+                /* padding: 5%; */
+            }
+            && a {
+                /* display: block; */
+                padding: 5%;
+            }
+            && h2 a:hover {
+                background: #6d0808;
+
+            }
+            && a:hover {
                 display:block;
+                background: #880606;
             }
         }
     }
-}
+} 
